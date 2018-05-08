@@ -11,6 +11,8 @@ ENV HASHICORP_RELEASES=https://releases.hashicorp.com
 # the rest of this may change over time.
 RUN addgroup consul && \
     adduser -S -G consul consul
+    
+USER consul
 
 # Set up certificates, base tools, and Consul.
 RUN set -eux && \
